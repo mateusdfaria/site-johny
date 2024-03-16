@@ -1,0 +1,218 @@
+body {
+    background: linear-gradient(45deg, #242424, #b1b0b0, #030303, #e5e6e6);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    width: 150px; /* Largura desejada do logotipo */
+    height: 200px; /* Altura automática para manter a proporção */
+    margin: 10px auto; /* Margem superior e inferior 10px, e centraliza horizontalmente */
+    display: flex; /* Torna o contêiner flexível */
+    justify-content: center;
+}
+
+/* Exemplo de estilo adicional para o cabeçalho */
+header {
+     /* Cor de fundo do cabeçalho */
+    padding: 10px; /* Espaçamento interno do cabeçalho */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.conteudo{
+    text-align: center;
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+    color: #1265d2;
+    margin-top: 100px;
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+    line-height: 1; /* Altere o valor para ajustar o espaçamento entre as linhas */
+    margin-bottom: 10px; /* Margem inferior */
+    text-align: center; /* Alinhamento do texto */
+    padding: 10px; 
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove o preenchimento padrão à esquerda */
+    text-align: center; /* Alinha o texto à esquerda */
+    font-size: 40px;
+    /* Preenchimento interno */
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+}
+
+li:before {
+    content: "\2022"; /* Adiciona um marcador circular */
+    margin-right: 5px; /* Adiciona um espaço entre o marcador e o texto */
+}
+
+.trab{
+    color: aliceblue;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin-bottom: 10px; /* Margem inferior */
+    text-align:center;
+    padding: 10px; /* Preenchimento interno */ /* Alinhamento do texto */
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+    font-size: 40px ;
+}
+.texto1{
+    color: aliceblue;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin-bottom: 20px; /* Margem inferior */
+    text-align:center;
+    padding: 10px; /* Preenchimento interno */ /* Alinhamento do texto */
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+    font-size: 20px ;
+}
+
+.servico{
+    color: aliceblue;
+    Font-family: Roboto, sans-serif;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 1% ;
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+}
+
+
+nav {
+    position: fixed;
+    top: 0; /* Defina a distância do topo da tela */
+    right: 0; /* Coloque o menu no canto direito */
+    
+}
+
+nav button {
+    text-decoration: dashed;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: right;
+    font-family: Roboto, sans-serif;
+    text-shadow: 2px 2px 4px rgba(251, 247, 247, 0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    overflow: hidden; /* Limpa o fluxo de elementos flutuantes */
+}
+
+.gif-container {
+    text-align: center; /* Centraliza o GIF horizontalmente */
+}
+
+.slider-left img,
+.gif-container img {
+    width: 450px; /* Define a largura das imagens e do GIF */
+    height: 600px; /* Altura automática para manter a proporção */
+}
+
+.slider-left {
+    position: relative; /* Define o posicionamento relativo */
+}
+
+.slider {
+    width: 100%; /* Garante que as imagens ocupem toda a largura da div */
+    height: 100%; /* Garante que as imagens ocupem toda a altura da div */
+    overflow: hidden; /* Oculta parte das imagens que excedam o tamanho da div */
+}
+
+.slider img {
+    display: none; 
+    position: relative;/* Oculta todas as imagens */
+}
+
+.slider img:first-child {
+    display: block; /* Exibe apenas o primeiro slide */
+}
+
+.dot-container {
+    position: absolute; /* Define o posicionamento absoluto */
+    bottom: 10px; /* Alinha os botões na parte inferior do contêiner */
+    left: 50%; /* Alinha os botões no centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza os botões horizontalmente */
+    text-align: center; /* Centraliza os botões */
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+
+.imagem-direita {
+    width: 450px; /* Largura desejada */
+    height: 600px; /* Altura desejada */
+    position: relative; /* Para que os botões fiquem posicionados relativamente a esta div */
+}
+
+.imagem-direita .img {
+    width: 100%; /* Garante que as imagens ocupem toda a largura da div */
+    height: 100%; /* Garante que as imagens ocupem toda a altura da div */
+    overflow: hidden; /* Oculta parte das imagens que excedam o tamanho da div */
+}
+
+.imagem-direita .img img {
+    width: 400px; /* Garante que as imagens ocupem toda a largura da div */
+    height: 650px; /* Altura automática para manter a proporção das imagens */
+}
+
+.botão-direita {
+    position: absolute; /* Define o posicionamento absoluto */
+    bottom: 10px; /* Alinha os botões na parte inferior do contêiner */
+    left: 50%; /* Alinha os botões no centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza os botões horizontalmente */
+    text-align: center; /* Centraliza os botões */
+}
+
+.botão-direita.active{
+    background-color: #717171;
+    
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+}
+
+.fa-whatsapp {
+    margin-top: 16px;
+}
